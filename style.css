@@ -46,6 +46,49 @@ a {
   text-decoration: none;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 2rem;
+}
+
+.search-input {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  width: 10rem;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 59, 109, 0.2);
+}
+
+.search-button {
+  background: var(--primary-blue);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.search-button:hover,
+.search-button:focus {
+  background: var(--secondary-blue);
+}
+
 .nav-list {
   list-style: none;
   display: flex;
