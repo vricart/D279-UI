@@ -28,15 +28,26 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
   background: #f9f9f9;
+  height: 100%;
+  overflow: hidden;
 }
 
 .contact-text h2 {
-  font-size: 2rem;
+  flex: 0 0 auto;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
   color: var(--primary-blue);
-  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.required-note {
+  grid-column: 1 / -1;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
 }
 
 .contact-text p {
@@ -46,11 +57,17 @@
 }
 
 .contact-form {
-  width: 75%;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
 }
 
 .contact-form .form-group {
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form label {
@@ -78,8 +95,10 @@
 }
 
 .contact-form .btn {
-  width: auto;
-  display: block;
+  grid-column: 1 / -1;
+  align-self: end;
+  justify-self: start;
+  margin-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
